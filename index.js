@@ -28,7 +28,7 @@ server.post('/bot/webhook', line.middleware(line_config), (req, res, next) => {
 
     // イベント処理のハンドリング
     req.body.events.forEach((event) => {
-        if (event.type == "message" && event.message.type == "test"){
+        if (event.type == "message" && event.message.type == "text"){
             if (event.message.text == "ガチホコ"){
                 events_processed.push(bot.replyMessage(event.replyToken, {
                     type: "text",
