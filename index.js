@@ -29,10 +29,30 @@ server.post('/bot/webhook', line.middleware(line_config), (req, res, next) => {
     // イベント処理のハンドリング
     req.body.events.forEach((event) => {
         if (event.type == "message" && event.message.type == "text"){
-            if (event.message.text == "ガチホコ"){
+            if (event.message.text == "ガチホコ" || event.message.text == "がちほこ"){
                 events_processed.push(bot.replyMessage(event.replyToken, {
                     type: "text",
-                    text: "二度とやりたくないゴミルール"
+                    text: "ボトルガイザーフォイル\nL3リールガンD\nバケットスロッシャー\nバケットスロッシャーソーダ\nノーチラス79"
+                }));
+            } else if (event.message.text == "ガチエリア" || event.message.text == "がちえりあ"){
+                events_processed.push(bot.replyMessage(event.replyToken, {
+                    type: "text",
+                    text: "ロングブラスターネクロ\nスプラスコープコラボ\nバケットスロッシャーソーダ\nボトルガイザーフォイル\nH3リールガンD"
+                }));
+            } else if (event.message.text == "ガチヤグラ" || event.message.text == "がちやぐら") {
+                events_processed.push(bot.replyMessage(event.replyToken, {
+                    type: "text",
+                    text: "ボトルガイザーフォイル\nカーボンローラーデコ\nRブラスターエリートデコ\nH3リールガンD\nノーチラス47"
+                }));
+            } else if (event.message.text == "ガチアサリ" || event.message.text == "がちあさり") {
+                events_processed.push(bot.replyMessage(event.replyToken, {
+                    type: "text",
+                    text: "ボトルガイザーフォイル\nバケットスロッシャーソーダ\nH3リールガンD\nL3リールガン\nバケットスロッシャーデコ"
+                }));
+            } else {
+                events_processed.push(bot.replyMessage(event.replyToken, {
+                    type: "text",
+                    text: "ひらがな/カタカナでガチマッチのルールを入力してください。\n例：ガチエリア"
                 }));
             }
         }
