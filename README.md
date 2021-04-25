@@ -1,5 +1,9 @@
-# gatchmatch-bot
+# SUMMARY
 スプラトゥーンのガチマッチのルールを入力すると、その時点での勝率の高い武器を５つ返してくれるLinebotです。
+
+## EXAMPLE
+input : ガチエリア or がちえりあ
+output : 勝率の高い武器が昇順に出力される。
 
 ## qrコード
 
